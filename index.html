@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Servisi | Preuzimanje</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            text-align: center; 
+            background-color: #f8f9fa; 
+            color: #333; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+        .container { 
+            max-width: 600px; 
+            background: white; 
+            padding: 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+        }
+        h1 { color: #0366d6; margin-bottom: 10px; }
+        p { font-size: 16px; color: #555; margin-bottom: 30px; line-height: 1.5; }
+        .btn { 
+            display: inline-block; 
+            padding: 15px 35px; 
+            font-size: 18px; 
+            color: white; 
+            background-color: #28a745; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            font-weight: bold; 
+            transition: background-color 0.3s;
+        }
+        .btn:hover { background-color: #218838; }
+        .footer-note { font-size: 12px; color: #999; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>e-Servisi</h1>
+        <p>Alat za instalaciju i ažuriranje programa potrebnih za rad sa državnim i bankarskim portalima u Srbiji.</p>
+        <p>Program automatski proverava da li su aplikacije instalirane i pokrenute, nudi instalaciju, ažuriranje i deinstalaciju — sve na jednom mestu, bez pretraživanja sajtova.</p>
+        <p></p>
+        <p>• e-Servisi — ePorezi i SmartBox (Poreska uprava), SecurityTray (CROSO), NexU APR (APR), ePIA (LPA), eUprava Potpis (eUprava)</p>
+        <p>• Sertifikati — drajveri za smart kartice: TrustEdge (MUP i PKS), SafeSign (Pošta), Nexus Personal (Halcom), QSCD (ESS)</p>
+        <p>• Čitači — čitači dokumenata (lična karta, zdravstvena kartica, saobraćajna dozvola, oružje)</p>
+        <p>• Banke — Halcom Personal E-bank, Office Banking Desktop, OTP Biznis e-bank, Raiffeisen Online Biznis</p>
+        
+        <!-- Dinamički link koji uvek skida .exe fajl iz najnovijeg izdanja -->
+        <a href="https://github.com/eservisisrbija/eservisi-app/releases/latest/download/eServisi.exe" class="btn">⬇ Preuzmi eServisi</a>
+        
+        <div class="footer-note">Aplikacija je namenjena operativnom sistemu Windows.</div>
+    </div>
+</body>
+</html>
