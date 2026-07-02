@@ -13,18 +13,33 @@
             display: flex; 
             justify-content: center; 
             align-items: center; 
-            height: 100vh; 
+            min-height: 100vh; /* POPRAVLJENO: min-height umesto height omogućava skrolovanje */
             margin: 0; 
+            padding: 40px 20px; /* DODATO: prostor gore i dole da sadržaj ne lepi za ivice ekrana */
+            box-sizing: border-box;
         }
         .container { 
-            max-width: 600px; 
+            max-width: 850px; /* POPRAVLJENO: prošireno sa 600px na 850px zbog široke slike aplikacije */
+            width: 100%;
             background: white; 
             padding: 40px; 
             border-radius: 12px; 
             box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            box-sizing: border-box;
         }
-        h1 { color: #0366d6; margin-bottom: 10px; }
-        p { font-size: 16px; color: #555; margin-bottom: 30px; line-height: 1.5; }
+        h1 { color: #0366d6; margin-bottom: 10px; margin-top: 0; }
+        p { font-size: 16px; color: #555; margin-bottom: 15px; line-height: 1.5; }
+        
+        /* NOVO: Stil koji drži sliku unutar belog okvira i sprečava je da se prelije */
+        .app-screenshot {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Blaga senka oko slike aplikacije */
+            margin: 25px 0;
+            display: inline-block;
+        }
+
         .btn { 
             display: inline-block; 
             padding: 15px 35px; 
@@ -35,9 +50,10 @@
             border-radius: 8px; 
             font-weight: bold; 
             transition: background-color 0.3s;
+            margin-top: 10px;
         }
         .btn:hover { background-color: #218838; }
-        .footer-note { font-size: 12px; color: #999; margin-top: 20px; }
+        .footer-note { font-size: 12px; color: #999; margin-top: 25px; }
     </style>
 </head>
 <body>
@@ -45,7 +61,7 @@
         <h1>e-Servisi</h1>
         <p>Alat za instalaciju i ažuriranje programa potrebnih za rad sa državnim i bankarskim portalima u Srbiji.</p>
         <p>Program automatski proverava da li su aplikacije instalirane i pokrenute, nudi instalaciju, ažuriranje i deinstalaciju — sve na jednom mestu, bez pretraživanja sajtova.</p>
-        <p></p>
+        
         <p>• e-Servisi — ePorezi i SmartBox (Poreska uprava), SecurityTray (CROSO), NexU APR (APR), ePIA (LPA), eUprava Potpis (eUprava)</p>
         <p>• Sertifikati — drajveri za smart kartice: TrustEdge (MUP i PKS), SafeSign (Pošta), Nexus Personal (Halcom), QSCD (ESS)</p>
         <p>• Čitači — čitači dokumenata (lična karta, zdravstvena kartica, saobraćajna dozvola, oružje)</p>
@@ -55,8 +71,9 @@
         
         <p><b>Kontakt: eservisisrbija@gmail.com</b></p>
 
-        <img src="eservisi.png" alt="e-Servisi aplikacija">
-        <!-- Dinamički link koji uvek skida .exe fajl iz najnovijeg izdanja -->
+        <img src="eservisi.png" alt="e-Servisi aplikacija" class="app-screenshot">
+        
+        <br>
         <a href="https://github.com/eservisisrbija/eservisi-app/releases/latest/download/eServisi.exe" class="btn">⬇ Preuzmi eServisi</a>
         
         <div class="footer-note">Aplikacija je namenjena operativnom sistemu Windows.</div>
